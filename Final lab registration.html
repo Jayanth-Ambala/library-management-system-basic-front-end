@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+   <head>
+<style>
+body {
+  background-image: url('product.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style> 
+          <title> Registration Form</title>
+   </head>
+<style type="text/css">
+.container {     
+font-size:20px;
+text-align:center;
+margin: auto;
+    }  
+h1 {
+  background-color: aquablue;
+} 
+h2{
+  background-color: powderblue;
+} 
+</style>  
+<body>
+
+
+<script>  
+function validateform(){  
+var name=document.myform.fname.value;
+var name1=document.myform.lname.value;  
+var password=document.myform.password.value;
+var password2=document.myform.fpassword.value;  
+var phone=document.myform.phone.value;  
+var email=document.myform.email.value;
+var last=email.substr(email.length - 10);
+if (name==null || name==""){  
+  alert("FirstName can't be blank");  
+  return false;  
+}
+else if(phone.length<10){  
+  alert("Phone must be at least 10 characters long.");  
+  return false;  
+  }  
+else if(last!="@gmail.com"){  
+  alert("Enter  valid email Address");  
+  return false;  
+  }
+else if(password.length<8){  
+  alert("Passwords must be 8 characters long");  
+  return false;  
+  }
+else if(password!=password2){  
+  alert("Passwords must be same");  
+  return false;  
+  }
+} 
+</script>  
+<body >
+<h1><p style="text-align:center; color:powderblue"><u>Library Registration Form</u></h1>
+       <center> <h2> Sign in </h2> </center>
+        
+        <form name="myform" method="post"  onsubmit="return validateform()" style="text-align: center; ">
+            <div class="container" style="text-align:left;">
+              <br> 
+                 First name: <input type="text" name="fname" placeholder="First Name" size="30"> <br>
+               <br>
+                last name: <input type="text" name="lname" placeholder="Last Name" size="30">
+                  <br>
+<br>
+                Gender :<input type="radio" name="m" value="m">
+                <label for="m"> MALE</mark></label>
+                 <input type="radio" name="m" value="f">
+                <label for="f"> FEMALE</mark></label><br>
+                 <br>
+                 Phone number: <input type="text" name="phone" placeholder="Moblie number" size="30"><br>
+                 <br>
+                 <br>
+                 Email address: <input type="email" name="email" placeholder="Please enter your mail" size="30" > <br>
+                 <br>
+                 <br>
+                 Password: <input type="password" name="password" placeholder="please type your password" size="30" > <br>
+                 Re-enter Password: <input type="password" name="fpassword" placeholder="please type your password" size="30" > <br>
+                <br><label for="birthday">Data of birth:</mark></label>
+                <input type="date" id="birthday" name="birthday"><br>
+                <br>
+                <p><mark>Select the  Geners</mark></p>
+                 <input type="checkbox" id="c" name="s" value="s">
+                 <label for="s">Drama</label><br>
+                 <input type="checkbox" id="h" name="s" value="p">
+                 <label for="p">Horror</mark></label><br>
+                 <input type="checkbox" id="a" name="s" value="o">
+                 <label for="o">Action</mark></label><br>
+ <label for="branch">Choose a Branch</label>
+                      <select name="branch" id="branch">
+                        <option value="cse">CSE</option>
+                          <option value="ece">ECE</option>
+                      <option value="mec">Mechanical</option>
+                      <option value="bio">Bio Technology</option>
+                      <option value="che">Chemical Engineering</option>
+                      <option value="are">Aeronautical Engineering</option>
+                   </select><br>
+<br>
+<input type="submit" name="sign in" id="sign in" value="sign in" class="button" /><br>
+<br>
+         </div>
+<br>
+     </form>
+<log><center><a href ="file:///D:/SEM-6/WAD/WAD%20lab/Login.html">
+  <input type="submit" value= "Login" name="">
+</a></center><log>
+  </body>
+</html>
